@@ -1,0 +1,13 @@
+D:\Code\XML\QLCT_GIA_DINH\QLCT_GIA_DINH\bin\Debug\QLCT_GIA_DINH.exe.config
+D:\Code\XML\QLCT_GIA_DINH\QLCT_GIA_DINH\bin\Debug\QLCT_GIA_DINH.exe
+D:\Code\XML\QLCT_GIA_DINH\QLCT_GIA_DINH\bin\Debug\QLCT_GIA_DINH.pdb
+D:\Code\XML\QLCT_GIA_DINH\QLCT_GIA_DINH\obj\Debug\QLCT_GIA_DINH.csprojResolveAssemblyReference.cache
+D:\Code\XML\QLCT_GIA_DINH\QLCT_GIA_DINH\obj\Debug\QLCT_GIA_DINH.Properties.Resources.resources
+D:\Code\XML\QLCT_GIA_DINH\QLCT_GIA_DINH\obj\Debug\QLCT_GIA_DINH.csproj.GenerateResource.Cache
+D:\Code\XML\QLCT_GIA_DINH\QLCT_GIA_DINH\obj\Debug\QLCT_GIA_DINH.exe
+D:\Code\XML\QLCT_GIA_DINH\QLCT_GIA_DINH\obj\Debug\QLCT_GIA_DINH.pdb
+D:\Code\XML\QLCT_GIA_DINH\QLCT_GIA_DINH\obj\Debug\QLCT_GIA_DINH.MH_Chinh.resources
+D:\Code\XML\QLCT_GIA_DINH\QLCT_GIA_DINH\obj\Debug\QLCT_GIA_DINH.MH_Tra_cuu_Thu_Chi.resources
+D:\Code\XML\QLCT_GIA_DINH\QLCT_GIA_DINH\obj\Debug\QLCT_GIA_DINH.MH_Quan_ly_Thu.resources
+D:\Code\XML\QLCT_GIA_DINH\QLCT_GIA_DINH\obj\Debug\QLCT_GIA_DINH.MH_Quan_ly_Chi.resources
+D:\Code\XML\QLCT_GIA_DINH\QLCT_GIA_DINH\obj\Debug\QLCT_GIA_DINH.MH_Thong_tin_Thanh_vien.resources
