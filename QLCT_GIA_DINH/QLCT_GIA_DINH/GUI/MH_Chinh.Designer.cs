@@ -55,9 +55,6 @@
             this.lbChucNang = new System.Windows.Forms.Label();
             this.btThanhVien = new System.Windows.Forms.Button();
             this.pnNam = new System.Windows.Forms.Panel();
-            this.lbNamThuBa = new System.Windows.Forms.Label();
-            this.lbNamThuHai = new System.Windows.Forms.Label();
-            this.lbNamThuNhat = new System.Windows.Forms.Label();
             this.picToLeft = new System.Windows.Forms.PictureBox();
             this.picToRight = new System.Windows.Forms.PictureBox();
             this.lbNam = new System.Windows.Forms.Label();
@@ -97,55 +94,46 @@
             // 
             this.btNamThuNhat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(253)))));
             this.btNamThuNhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btNamThuNhat.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btNamThuNhat.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btNamThuNhat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btNamThuNhat.Location = new System.Drawing.Point(41, 46);
             this.btNamThuNhat.Margin = new System.Windows.Forms.Padding(4);
             this.btNamThuNhat.Name = "btNamThuNhat";
             this.btNamThuNhat.Size = new System.Drawing.Size(116, 86);
             this.btNamThuNhat.TabIndex = 1;
-            this.btNamThuNhat.Text = "2016";
-            this.btNamThuNhat.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.btNamThuNhat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btNamThuNhat.UseVisualStyleBackColor = false;
             this.btNamThuNhat.Click += new System.EventHandler(this.btNamThuNhat_Click);
-            this.btNamThuNhat.MouseLeave += new System.EventHandler(this.btNamThuNhat_MouseLeave);
-            this.btNamThuNhat.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btNamThuNhat_MouseMove);
             // 
             // btNamThuHai
             // 
             this.btNamThuHai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(253)))));
             this.btNamThuHai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btNamThuHai.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btNamThuHai.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btNamThuHai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btNamThuHai.Location = new System.Drawing.Point(177, 46);
             this.btNamThuHai.Margin = new System.Windows.Forms.Padding(4);
             this.btNamThuHai.Name = "btNamThuHai";
             this.btNamThuHai.Size = new System.Drawing.Size(116, 86);
             this.btNamThuHai.TabIndex = 2;
-            this.btNamThuHai.Text = "2015";
-            this.btNamThuHai.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.btNamThuHai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btNamThuHai.UseVisualStyleBackColor = false;
             this.btNamThuHai.Click += new System.EventHandler(this.btNamThuHai_Click);
-            this.btNamThuHai.MouseLeave += new System.EventHandler(this.btNamThuHai_MouseLeave);
-            this.btNamThuHai.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btNamThuHai_MouseMove);
             // 
             // btNamThuBa
             // 
             this.btNamThuBa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(253)))));
             this.btNamThuBa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btNamThuBa.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btNamThuBa.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btNamThuBa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.btNamThuBa.Location = new System.Drawing.Point(313, 46);
             this.btNamThuBa.Margin = new System.Windows.Forms.Padding(4);
             this.btNamThuBa.Name = "btNamThuBa";
             this.btNamThuBa.Size = new System.Drawing.Size(116, 86);
             this.btNamThuBa.TabIndex = 3;
-            this.btNamThuBa.Text = "2014";
-            this.btNamThuBa.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.btNamThuBa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btNamThuBa.UseVisualStyleBackColor = false;
             this.btNamThuBa.Click += new System.EventHandler(this.btNamThuBa_Click);
-            this.btNamThuBa.MouseLeave += new System.EventHandler(this.btNamThuBa_MouseLeave);
-            this.btNamThuBa.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btNamThuBa_MouseMove);
             // 
             // btThangMot
             // 
@@ -153,13 +141,12 @@
             this.btThangMot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btThangMot.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btThangMot.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btThangMot.Image = ((System.Drawing.Image)(resources.GetObject("btThangMot.Image")));
             this.btThangMot.Location = new System.Drawing.Point(18, 34);
             this.btThangMot.Margin = new System.Windows.Forms.Padding(4);
             this.btThangMot.Name = "btThangMot";
             this.btThangMot.Size = new System.Drawing.Size(157, 86);
             this.btThangMot.TabIndex = 4;
-            this.btThangMot.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btThangMot.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btThangMot.UseVisualStyleBackColor = false;
             this.btThangMot.Click += new System.EventHandler(this.btThangMot_Click);
             // 
@@ -284,13 +271,12 @@
             this.btThangMuoiHai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btThangMuoiHai.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btThangMuoiHai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btThangMuoiHai.Image = ((System.Drawing.Image)(resources.GetObject("btThangMuoiHai.Image")));
             this.btThangMuoiHai.Location = new System.Drawing.Point(207, 518);
             this.btThangMuoiHai.Margin = new System.Windows.Forms.Padding(4);
             this.btThangMuoiHai.Name = "btThangMuoiHai";
             this.btThangMuoiHai.Size = new System.Drawing.Size(157, 86);
             this.btThangMuoiHai.TabIndex = 15;
-            this.btThangMuoiHai.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btThangMuoiHai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btThangMuoiHai.UseVisualStyleBackColor = false;
             this.btThangMuoiHai.Click += new System.EventHandler(this.btThangMuoiHai_Click);
             // 
@@ -300,13 +286,12 @@
             this.btThangMuoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btThangMuoi.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btThangMuoi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btThangMuoi.Image = ((System.Drawing.Image)(resources.GetObject("btThangMuoi.Image")));
             this.btThangMuoi.Location = new System.Drawing.Point(207, 421);
             this.btThangMuoi.Margin = new System.Windows.Forms.Padding(4);
             this.btThangMuoi.Name = "btThangMuoi";
             this.btThangMuoi.Size = new System.Drawing.Size(157, 86);
             this.btThangMuoi.TabIndex = 13;
-            this.btThangMuoi.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btThangMuoi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btThangMuoi.UseVisualStyleBackColor = false;
             this.btThangMuoi.Click += new System.EventHandler(this.btThangMuoi_Click);
             // 
@@ -316,13 +301,12 @@
             this.btThangMuoiMot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btThangMuoiMot.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btThangMuoiMot.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btThangMuoiMot.Image = ((System.Drawing.Image)(resources.GetObject("btThangMuoiMot.Image")));
             this.btThangMuoiMot.Location = new System.Drawing.Point(18, 519);
             this.btThangMuoiMot.Margin = new System.Windows.Forms.Padding(4);
             this.btThangMuoiMot.Name = "btThangMuoiMot";
             this.btThangMuoiMot.Size = new System.Drawing.Size(157, 86);
             this.btThangMuoiMot.TabIndex = 14;
-            this.btThangMuoiMot.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btThangMuoiMot.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btThangMuoiMot.UseVisualStyleBackColor = false;
             this.btThangMuoiMot.Click += new System.EventHandler(this.btThangMuoiMot_Click);
             // 
@@ -332,13 +316,12 @@
             this.btThangChin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btThangChin.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btThangChin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btThangChin.Image = ((System.Drawing.Image)(resources.GetObject("btThangChin.Image")));
             this.btThangChin.Location = new System.Drawing.Point(18, 422);
             this.btThangChin.Margin = new System.Windows.Forms.Padding(4);
             this.btThangChin.Name = "btThangChin";
             this.btThangChin.Size = new System.Drawing.Size(157, 86);
             this.btThangChin.TabIndex = 12;
-            this.btThangChin.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btThangChin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btThangChin.UseVisualStyleBackColor = false;
             this.btThangChin.Click += new System.EventHandler(this.btThangChin_Click);
             // 
@@ -348,13 +331,12 @@
             this.btThangBay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btThangBay.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btThangBay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btThangBay.Image = ((System.Drawing.Image)(resources.GetObject("btThangBay.Image")));
             this.btThangBay.Location = new System.Drawing.Point(18, 325);
             this.btThangBay.Margin = new System.Windows.Forms.Padding(4);
             this.btThangBay.Name = "btThangBay";
             this.btThangBay.Size = new System.Drawing.Size(157, 86);
             this.btThangBay.TabIndex = 10;
-            this.btThangBay.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btThangBay.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btThangBay.UseVisualStyleBackColor = false;
             this.btThangBay.Click += new System.EventHandler(this.btThangBay_Click);
             // 
@@ -364,13 +346,12 @@
             this.btThangNam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btThangNam.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btThangNam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btThangNam.Image = ((System.Drawing.Image)(resources.GetObject("btThangNam.Image")));
             this.btThangNam.Location = new System.Drawing.Point(18, 228);
             this.btThangNam.Margin = new System.Windows.Forms.Padding(4);
             this.btThangNam.Name = "btThangNam";
             this.btThangNam.Size = new System.Drawing.Size(157, 86);
             this.btThangNam.TabIndex = 8;
-            this.btThangNam.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btThangNam.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btThangNam.UseVisualStyleBackColor = false;
             this.btThangNam.Click += new System.EventHandler(this.btThangNam_Click);
             // 
@@ -380,13 +361,12 @@
             this.btThangTam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btThangTam.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btThangTam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btThangTam.Image = ((System.Drawing.Image)(resources.GetObject("btThangTam.Image")));
             this.btThangTam.Location = new System.Drawing.Point(207, 324);
             this.btThangTam.Margin = new System.Windows.Forms.Padding(4);
             this.btThangTam.Name = "btThangTam";
             this.btThangTam.Size = new System.Drawing.Size(157, 86);
             this.btThangTam.TabIndex = 11;
-            this.btThangTam.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btThangTam.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btThangTam.UseVisualStyleBackColor = false;
             this.btThangTam.Click += new System.EventHandler(this.btThangTam_Click);
             // 
@@ -396,13 +376,12 @@
             this.btThangSau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btThangSau.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btThangSau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btThangSau.Image = ((System.Drawing.Image)(resources.GetObject("btThangSau.Image")));
             this.btThangSau.Location = new System.Drawing.Point(207, 227);
             this.btThangSau.Margin = new System.Windows.Forms.Padding(4);
             this.btThangSau.Name = "btThangSau";
             this.btThangSau.Size = new System.Drawing.Size(157, 86);
             this.btThangSau.TabIndex = 9;
-            this.btThangSau.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btThangSau.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btThangSau.UseVisualStyleBackColor = false;
             this.btThangSau.Click += new System.EventHandler(this.btThangSau_Click);
             // 
@@ -412,13 +391,12 @@
             this.btThangTu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btThangTu.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btThangTu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btThangTu.Image = ((System.Drawing.Image)(resources.GetObject("btThangTu.Image")));
             this.btThangTu.Location = new System.Drawing.Point(207, 131);
             this.btThangTu.Margin = new System.Windows.Forms.Padding(4);
             this.btThangTu.Name = "btThangTu";
             this.btThangTu.Size = new System.Drawing.Size(157, 86);
             this.btThangTu.TabIndex = 7;
-            this.btThangTu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btThangTu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btThangTu.UseVisualStyleBackColor = false;
             this.btThangTu.Click += new System.EventHandler(this.btThangTu_Click);
             // 
@@ -428,13 +406,12 @@
             this.btThangHai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btThangHai.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btThangHai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btThangHai.Image = ((System.Drawing.Image)(resources.GetObject("btThangHai.Image")));
             this.btThangHai.Location = new System.Drawing.Point(207, 33);
             this.btThangHai.Margin = new System.Windows.Forms.Padding(4);
             this.btThangHai.Name = "btThangHai";
             this.btThangHai.Size = new System.Drawing.Size(157, 86);
             this.btThangHai.TabIndex = 5;
-            this.btThangHai.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btThangHai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btThangHai.UseVisualStyleBackColor = false;
             this.btThangHai.Click += new System.EventHandler(this.btThangHai_Click);
             // 
@@ -444,13 +421,12 @@
             this.btThangBa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btThangBa.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btThangBa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btThangBa.Image = ((System.Drawing.Image)(resources.GetObject("btThangBa.Image")));
             this.btThangBa.Location = new System.Drawing.Point(18, 132);
             this.btThangBa.Margin = new System.Windows.Forms.Padding(4);
             this.btThangBa.Name = "btThangBa";
             this.btThangBa.Size = new System.Drawing.Size(157, 86);
             this.btThangBa.TabIndex = 6;
-            this.btThangBa.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btThangBa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btThangBa.UseVisualStyleBackColor = false;
             this.btThangBa.Click += new System.EventHandler(this.btThangBa_Click);
             // 
@@ -501,9 +477,6 @@
             // 
             this.pnNam.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pnNam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(97)))));
-            this.pnNam.Controls.Add(this.lbNamThuBa);
-            this.pnNam.Controls.Add(this.lbNamThuHai);
-            this.pnNam.Controls.Add(this.lbNamThuNhat);
             this.pnNam.Controls.Add(this.picToLeft);
             this.pnNam.Controls.Add(this.picToRight);
             this.pnNam.Controls.Add(this.lbNam);
@@ -514,48 +487,6 @@
             this.pnNam.Name = "pnNam";
             this.pnNam.Size = new System.Drawing.Size(468, 150);
             this.pnNam.TabIndex = 1;
-            // 
-            // lbNamThuBa
-            // 
-            this.lbNamThuBa.AutoSize = true;
-            this.lbNamThuBa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(253)))));
-            this.lbNamThuBa.Font = new System.Drawing.Font("Arial", 11F);
-            this.lbNamThuBa.Location = new System.Drawing.Point(319, 71);
-            this.lbNamThuBa.Name = "lbNamThuBa";
-            this.lbNamThuBa.Size = new System.Drawing.Size(68, 51);
-            this.lbNamThuBa.TabIndex = 23;
-            this.lbNamThuBa.Text = "Thể hiện \r\ndữ liệu\r\nthống kê";
-            this.lbNamThuBa.Click += new System.EventHandler(this.lbNamThuBa_Click);
-            this.lbNamThuBa.MouseLeave += new System.EventHandler(this.lbNamThuBa_MouseLeave);
-            this.lbNamThuBa.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lbNamThuBa_MouseMove);
-            // 
-            // lbNamThuHai
-            // 
-            this.lbNamThuHai.AutoSize = true;
-            this.lbNamThuHai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(253)))));
-            this.lbNamThuHai.Font = new System.Drawing.Font("Arial", 11F);
-            this.lbNamThuHai.Location = new System.Drawing.Point(181, 71);
-            this.lbNamThuHai.Name = "lbNamThuHai";
-            this.lbNamThuHai.Size = new System.Drawing.Size(68, 51);
-            this.lbNamThuHai.TabIndex = 23;
-            this.lbNamThuHai.Text = "Thể hiện \r\ndữ liệu\r\nthống kê";
-            this.lbNamThuHai.Click += new System.EventHandler(this.lbNamThuHai_Click);
-            this.lbNamThuHai.MouseLeave += new System.EventHandler(this.lbNamThuHai_MouseLeave);
-            this.lbNamThuHai.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lbNamThuHai_MouseMove);
-            // 
-            // lbNamThuNhat
-            // 
-            this.lbNamThuNhat.AutoSize = true;
-            this.lbNamThuNhat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(253)))));
-            this.lbNamThuNhat.Font = new System.Drawing.Font("Arial", 11F);
-            this.lbNamThuNhat.Location = new System.Drawing.Point(52, 71);
-            this.lbNamThuNhat.Name = "lbNamThuNhat";
-            this.lbNamThuNhat.Size = new System.Drawing.Size(68, 51);
-            this.lbNamThuNhat.TabIndex = 23;
-            this.lbNamThuNhat.Text = "Thể hiện \r\ndữ liệu\r\nthống kê";
-            this.lbNamThuNhat.Click += new System.EventHandler(this.lbNamThuNhat_Click);
-            this.lbNamThuNhat.MouseLeave += new System.EventHandler(this.lbNamThuNhat_MouseLeave);
-            this.lbNamThuNhat.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lbNamThuNhat_MouseMove);
             // 
             // picToLeft
             // 
@@ -568,8 +499,6 @@
             this.picToLeft.TabIndex = 4;
             this.picToLeft.TabStop = false;
             this.picToLeft.Click += new System.EventHandler(this.picToLeft_Click);
-            this.picToLeft.MouseLeave += new System.EventHandler(this.picToLeft_MouseLeave);
-            this.picToLeft.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picToLeft_MouseMove);
             // 
             // picToRight
             // 
@@ -582,8 +511,6 @@
             this.picToRight.TabIndex = 4;
             this.picToRight.TabStop = false;
             this.picToRight.Click += new System.EventHandler(this.picToRight_Click);
-            this.picToRight.MouseLeave += new System.EventHandler(this.picToRight_MouseLeave);
-            this.picToRight.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picToRight_MouseMove);
             // 
             // lbNam
             // 
@@ -895,9 +822,6 @@
         private System.Windows.Forms.Label lbThongKeB;
         private System.Windows.Forms.Label lbThongKeC;
         private System.Windows.Forms.Label lbThongKeA;
-        private System.Windows.Forms.Label lbNamThuBa;
-        private System.Windows.Forms.Label lbNamThuHai;
-        private System.Windows.Forms.Label lbNamThuNhat;
         private System.Windows.Forms.Label lbThangDangChon;
         private System.Windows.Forms.Panel panel1;
     }

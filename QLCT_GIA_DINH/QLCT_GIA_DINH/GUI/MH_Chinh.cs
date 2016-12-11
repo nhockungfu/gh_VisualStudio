@@ -29,22 +29,18 @@ namespace QLCT_GIA_DINH
 
         private void MH_Chinh_Load(object sender, EventArgs e)
         {
-            try
-            {
-                Danh_Sach_Cac_Nam = Service.Lay_Tat_ca_Cac_Nam();//lấy ra danh sách các năm trong csdl
-                Thang_Dang_Chon = 1; //mặc định chọn tháng đầu tiên
-                Nam_Dang_Chon = Danh_Sach_Cac_Nam[Danh_Sach_Cac_Nam.Length - 1]; //mặc định chọn năm gần nhất
+            Danh_Sach_Cac_Nam = Service.Lay_Tat_ca_Cac_Nam();//lấy ra danh sách các năm trong csdl
 
-                Hien_Cac_Nam();//hiện các năm lên bảng điều khiển
-                Hien_Ten_Thanh_vien_Gia_dinh();
-                Xuat_Thong_Ke_Tung_Thang(Nam_Dang_Chon); //hiện thống kê từng tháng 1->12
-                btNamThuNhat_Click(sender, e);
-            }
-            catch
-            {
-                MessageBox.Show("Cần kết nối WebService !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                this.Close();
-            }
+            Hien_thi_Thong_ke_Nam();//hiện các năm lên bảng điều khiển
+            Hien_Ten_Thanh_vien_Gia_dinh();
+
+            string temp = btNamThuNhat.Text.Substring(15, 4);
+
+            Xuat_Thong_Ke_Tung_Thang(Nam_Dang_Chon); //hiện thống kê từng tháng 1->12
+
+            btNamThuNhat_Click(sender, e); //lần đầu tiên chạy sẽ click vào năm gần nhất -
+            btThangMot_Click(sender, e); //và tháng 1
+
         }
 
         protected void Hien_Ten_Thanh_vien_Gia_dinh()
@@ -119,13 +115,22 @@ namespace QLCT_GIA_DINH
                 int Tong_Chi = 0;
                 int Tong_Chenh_lech = 0;
 
-                Thong_ke_Theo_Thang(ref Tong_Thu, ref Tong_Chi, ref Tong_Chenh_lech, i + 1, Theo_Nam);
+                //Thong_ke_Theo_Thang(ref Tong_Thu, ref Tong_Chi, ref Tong_Chenh_lech, i + 1, Theo_Nam);
+
+                int[] Thong_ke = Service.Thong_ke_Tong_Quat((i+1).ToString(), Theo_Nam.ToString());
+
+                for (int k  = 0; k < Thong_ke.Length; k += 3) //Thong_ke.Length = 15
+                {
+                    Tong_Thu += Thong_ke[k];
+                    Tong_Chi += Thong_ke[k + 1];
+                    Tong_Chenh_lech += Thong_ke[k + 2];
+                }
 
                 Thong_Ke_Nam[0] += Tong_Thu;
                 Thong_Ke_Nam[1] += Tong_Chi;
-                Thong_Ke_Nam[2] += Tong_Chenh_lech;
+                Thong_Ke_Nam[2] += Tong_Thu - Tong_Chi;
 
-                string Chuoi_Thong_ke = Tong_Thu.ToString() + "\n" + Tong_Chi.ToString() + "\n" + Tong_Chenh_lech.ToString();
+                string Chuoi_Thong_ke = "                 Tháng " + (i+1) + "\n+" + Tong_Thu + "\n-" + Tong_Chi + "\n=" + Tong_Chenh_lech;
 
                 if (i + 1 == 1)
                     btThangMot.Text = Chuoi_Thong_ke;
@@ -156,43 +161,41 @@ namespace QLCT_GIA_DINH
             return Thong_Ke_Nam;
         }
 
-        protected void Hien_Cac_Nam(int chiSo = 0)
+        protected void Hien_thi_Thong_ke_Nam(int chiSo = 0)
         {
-
-            int soLuongPhanTu = Danh_Sach_Cac_Nam.Length;
-
-            if (soLuongPhanTu - (chiSo + 1) >= 0)
-            {
-                btNamThuNhat.Show();
-                btNamThuNhat.Text = Danh_Sach_Cac_Nam[chiSo].ToString();
-            }
-            else return;
-
-            if ((soLuongPhanTu - (chiSo + 2)) >= 0)
-            {
-                btNamThuHai.Show();
-                btNamThuHai.Text = Danh_Sach_Cac_Nam[chiSo + 1].ToString();
-            }
-            else btNamThuHai.Hide();
-
-            if ((soLuongPhanTu - (chiSo + 3)) >= 0)
-            {
-                btNamThuBa.Show();
-                btNamThuBa.Text = Danh_Sach_Cac_Nam[chiSo + 2].ToString();
-            }
-            else btNamThuBa.Hide();
 
             List<int> Thong_Ke_Nam1;
             List<int> Thong_Ke_Nam2;
             List<int> Thong_Ke_Nam3;
 
-            Thong_Ke_Nam1 = Xuat_Thong_Ke_Tung_Thang(Convert.ToInt32(btNamThuNhat.Text));
-            Thong_Ke_Nam2 = Xuat_Thong_Ke_Tung_Thang(Convert.ToInt32(btNamThuHai.Text));
-            Thong_Ke_Nam3 = Xuat_Thong_Ke_Tung_Thang(Convert.ToInt32(btNamThuBa.Text));
+            int soLuongPhanTu = Danh_Sach_Cac_Nam.Length;
 
-            lbNamThuNhat.Text = Thong_Ke_Nam1[0] + "\n" + Thong_Ke_Nam1[1] + "\n" + Thong_Ke_Nam1[2];
-            lbNamThuHai.Text = Thong_Ke_Nam2[0] + "\n" + Thong_Ke_Nam2[1] + "\n" + Thong_Ke_Nam2[2];
-            lbNamThuBa.Text = Thong_Ke_Nam3[0] + "\n" + Thong_Ke_Nam3[1] + "\n" + Thong_Ke_Nam3[2];
+            if (soLuongPhanTu - (chiSo + 1) >= 0) //hiện năm thứ nhất
+            {
+                btNamThuNhat.Show();
+                btNamThuNhat.Text = "               " + Danh_Sach_Cac_Nam[chiSo].ToString();
+                Thong_Ke_Nam1 = Xuat_Thong_Ke_Tung_Thang(Convert.ToInt32(btNamThuNhat.Text.Substring(15,4)));
+                btNamThuNhat.Text = btNamThuNhat.Text + "\n+" + Thong_Ke_Nam1[0] + "\n-" + Thong_Ke_Nam1[1] + "\n=" + Thong_Ke_Nam1[2];
+            }
+            else return;
+
+            if ((soLuongPhanTu - (chiSo + 2)) >= 0) //hiện năm thứ hai
+            {
+                btNamThuHai.Show();
+                btNamThuHai.Text = "               " + Danh_Sach_Cac_Nam[chiSo + 1].ToString();
+                Thong_Ke_Nam2 = Xuat_Thong_Ke_Tung_Thang(Convert.ToInt32(btNamThuHai.Text.Substring(15,4)));
+                btNamThuHai.Text = btNamThuHai.Text + "\n+" + Thong_Ke_Nam2[0] + "\n-" + Thong_Ke_Nam2[1] + "\n=" + Thong_Ke_Nam2[2];
+            }
+            else btNamThuHai.Hide();
+
+            if ((soLuongPhanTu - (chiSo + 3)) >= 0) //hiện năm thứ ba
+            {
+                btNamThuBa.Show();
+                btNamThuBa.Text = "               " + Danh_Sach_Cac_Nam[chiSo + 2].ToString();
+                Thong_Ke_Nam3 = Xuat_Thong_Ke_Tung_Thang(Convert.ToInt32(btNamThuBa.Text.Substring(15, 4)));
+                btNamThuBa.Text = btNamThuBa.Text + "\n+" + Thong_Ke_Nam3[0] + "\n-" + Thong_Ke_Nam3[1] + "\n=" + Thong_Ke_Nam3[2];
+            }
+            else btNamThuBa.Hide();
 
         }
 
@@ -200,34 +203,12 @@ namespace QLCT_GIA_DINH
         //////////////////XỬ LÝ///////EVENT ///////////////////////////////////////////////////////////
         ///////////////////////////////////////////////////////////////////////////////////////////////
 
-        private void picToRight_MouseLeave(object sender, EventArgs e)
-        {
-            picToRight.BackColor = Color.FromArgb(241, 107, 104);
-
-        }
-
-        private void picToLeft_MouseLeave(object sender, EventArgs e)
-        {
-            picToLeft.BackColor = Color.FromArgb(241, 107, 104);
-        }
-
-        private void picToLeft_MouseMove(object sender, MouseEventArgs e)
-        {
-            picToLeft.BackColor = Color.FromArgb(228, 228, 228);
-        }
-
-        private void picToRight_MouseMove(object sender, MouseEventArgs e)
-        {
-            picToRight.BackColor = Color.FromArgb(228, 228, 228);
-
-        }
-
         private void picToRight_Click(object sender, EventArgs e)
         {
             if (Chi_so_Chay_Nam < Danh_Sach_Cac_Nam.Length - 3)
             {
                 Chi_so_Chay_Nam += 3;
-                Hien_Cac_Nam(Chi_so_Chay_Nam);
+                Hien_thi_Thong_ke_Nam(Chi_so_Chay_Nam);
             }
         }
 
@@ -236,7 +217,7 @@ namespace QLCT_GIA_DINH
             if (Chi_so_Chay_Nam >= 3)
             {
                 Chi_so_Chay_Nam -= 3;
-                Hien_Cac_Nam(Chi_so_Chay_Nam);
+                Hien_thi_Thong_ke_Nam(Chi_so_Chay_Nam);
             }
         }
 
@@ -244,7 +225,7 @@ namespace QLCT_GIA_DINH
 
         private void btNamThuNhat_Click(object sender, EventArgs e)
         {
-            Nam_Dang_Chon = Convert.ToInt32(btNamThuNhat.Text);
+            Nam_Dang_Chon = Convert.ToInt32(btNamThuNhat.Text.Substring(15, 4));
             Thang_Dang_Chon = 1;
             Chon_Thang(Thang_Dang_Chon, Nam_Dang_Chon);
             Xuat_Thong_Ke_Tung_Thang(Nam_Dang_Chon);
@@ -254,7 +235,7 @@ namespace QLCT_GIA_DINH
 
         private void btNamThuHai_Click(object sender, EventArgs e)
         {
-            Nam_Dang_Chon = Convert.ToInt32(btNamThuHai.Text);
+            Nam_Dang_Chon = Convert.ToInt32(btNamThuHai.Text.Substring(15, 4));
             Thang_Dang_Chon = 1;
             Chon_Thang(Thang_Dang_Chon, Nam_Dang_Chon);
             Xuat_Thong_Ke_Tung_Thang(Nam_Dang_Chon);
@@ -264,7 +245,7 @@ namespace QLCT_GIA_DINH
 
         private void btNamThuBa_Click(object sender, EventArgs e)
         {
-            Nam_Dang_Chon = Convert.ToInt32(btNamThuBa.Text);
+            Nam_Dang_Chon = Convert.ToInt32(btNamThuBa.Text.Substring(15, 4));
             Thang_Dang_Chon = 1;
             Chon_Thang(Thang_Dang_Chon, Nam_Dang_Chon);
             Xuat_Thong_Ke_Tung_Thang(Nam_Dang_Chon);
@@ -358,39 +339,6 @@ namespace QLCT_GIA_DINH
             lbThangDangChon.Text = "Tháng "+Thang_Dang_Chon.ToString() + ", năm " + Nam_Dang_Chon.ToString();
         }
 
-        private void btNamThuNhat_MouseMove(object sender, MouseEventArgs e)
-        {
-            lbNamThuNhat.BackColor = Color.FromArgb(229, 228, 227);
-        }
-
-        private void btNamThuHai_MouseMove(object sender, MouseEventArgs e)
-        {
-            lbNamThuHai.BackColor = Color.FromArgb(229, 228, 227);
-        }
-
-        private void btNamThuBa_MouseMove(object sender, MouseEventArgs e)
-        {
-            lbNamThuBa.BackColor = Color.FromArgb(229, 228, 227);
-        }
-
-        private void btNamThuNhat_MouseLeave(object sender, EventArgs e)
-        {
-            lbNamThuNhat.BackColor = Color.FromArgb(255, 254, 253);
-            btNamThuNhat.BackColor = Color.FromArgb(255, 254, 253);
-        }
-
-        private void btNamThuHai_MouseLeave(object sender, EventArgs e)
-        {
-            lbNamThuHai.BackColor = Color.FromArgb(255, 254, 253);
-            btNamThuHai.BackColor = Color.FromArgb(255, 254, 253);
-        }
-
-        private void btNamThuBa_MouseLeave(object sender, EventArgs e)
-        {
-            lbNamThuBa.BackColor = Color.FromArgb(255, 254, 253);
-            btNamThuBa.BackColor = Color.FromArgb(255, 254, 253);
-        }
-
         private void lbNamThuNhat_Click(object sender, EventArgs e)
         {
             btNamThuNhat_Click(sender, e);
@@ -404,39 +352,6 @@ namespace QLCT_GIA_DINH
         private void lbNamThuBa_Click(object sender, EventArgs e)
         {
             btNamThuBa_Click(sender, e);
-        }
-
-        private void lbNamThuNhat_MouseMove(object sender, MouseEventArgs e)
-        {
-            lbNamThuNhat.BackColor = Color.FromArgb(229, 228, 227);
-            btNamThuNhat.BackColor = Color.FromArgb(229, 228, 227);
-        }
-
-        private void lbNamThuHai_MouseMove(object sender, MouseEventArgs e)
-        {
-            lbNamThuHai.BackColor = Color.FromArgb(229, 228, 227);
-            btNamThuHai.BackColor = Color.FromArgb(229, 228, 227);
-        }
-
-        private void lbNamThuBa_MouseMove(object sender, MouseEventArgs e)
-        {
-            lbNamThuBa.BackColor = Color.FromArgb(229, 228, 227);
-            btNamThuBa.BackColor = Color.FromArgb(229, 228, 227);
-        }
-
-        private void lbNamThuBa_MouseLeave(object sender, EventArgs e)
-        {
-            btNamThuBa.BackColor = Color.FromArgb(255, 254, 253);
-        }
-
-        private void lbNamThuHai_MouseLeave(object sender, EventArgs e)
-        {
-            btNamThuHai.BackColor = Color.FromArgb(255, 254, 253);
-        }
-
-        private void lbNamThuNhat_MouseLeave(object sender, EventArgs e)
-        {
-            btNamThuNhat.BackColor = Color.FromArgb(255, 254, 253);
         }
 
         private void btTraCuu_Click(object sender, EventArgs e)

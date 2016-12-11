@@ -17,8 +17,6 @@ namespace QLCT_GIA_DINH
         static GiaDinhServiceSoapClient Service = new GiaDinhServiceSoapClient();
         static string[] danh_sach_ten = Service.Lay_danh_Sach_Ten();
 
-
-
         public MH_Thong_tin_Thanh_vien()
         {
             InitializeComponent();
@@ -72,7 +70,6 @@ namespace QLCT_GIA_DINH
                 picThuTu.Image = Xuat_Hinh(Nhi_phan_Hinh_D);
 
         }
-
 
         protected void Load_Thong_tin()
         {

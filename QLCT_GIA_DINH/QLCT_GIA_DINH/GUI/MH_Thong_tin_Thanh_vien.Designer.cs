@@ -116,7 +116,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.panel1.BackColor = System.Drawing.Color.Yellow;
             this.panel1.Controls.Add(this.lbNgaySinhA);
             this.panel1.Controls.Add(this.lbGioiTinhA);
             this.panel1.Controls.Add(this.lbHoTenA);
@@ -272,7 +272,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.Maroon;
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(97)))));
             this.panel5.Controls.Add(this.panel1);
             this.panel5.Controls.Add(this.panel4);
             this.panel5.Controls.Add(this.panel3);

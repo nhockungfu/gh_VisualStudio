@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<CNXML_SV_QLGD_2_Cach_2>
+  <xs:schema id="CNXML_SV_QLGD_2_Cach_2" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="CNXML_SV_QLGD_2_Cach_2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="GIOI_TINH">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="Ten" type="xs:string" />
+              <xs:attribute name="Ma_so" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="GIA_DINH">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="Ten" type="xs:string" />
+              <xs:attribute name="Dien_thoai" type="xs:string" />
+              <xs:attribute name="Dia_chi" type="xs:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="THANH_VIEN">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="Ho_ten" type="xs:string" />
+              <xs:attribute name="Ngay_sinh" type="xs:dateTime" />
+              <xs:attribute name="ID_GIOI_TINH" type="xs:int" />
+              <xs:attribute name="ID_GIA_DINH" type="xs:int" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="KHOAN_THU_GIA_DINH">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="Ngay" type="xs:dateTime" />
+              <xs:attribute name="So_tien" type="xs:int" />
+              <xs:attribute name="ID_GIA_DINH" type="xs:int" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="KHOAN_CHI_GIA_DINH">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="Ngay" type="xs:dateTime" />
+              <xs:attribute name="So_tien" type="xs:int" />
+              <xs:attribute name="ID_GIA_DINH" type="xs:int" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="KHOAN_THU_THANH_VIEN">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="Ngay" type="xs:dateTime" />
+              <xs:attribute name="So_tien" type="xs:int" />
+              <xs:attribute name="ID_THANH_VIEN" type="xs:int" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="KHOAN_CHI_THANH_VIEN">
+            <xs:complexType>
+              <xs:attribute name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" use="required" />
+              <xs:attribute name="Ngay" type="xs:dateTime" />
+              <xs:attribute name="So_tien" type="xs:int" />
+              <xs:attribute name="ID_THANH_VIEN" type="xs:int" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//GIOI_TINH" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="GIA_DINH_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//GIA_DINH" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="THANH_VIEN_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//THANH_VIEN" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="KHOAN_THU_GIA_DINH_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//KHOAN_THU_GIA_DINH" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="KHOAN_CHI_GIA_DINH_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//KHOAN_CHI_GIA_DINH" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="KHOAN_THU_THANH_VIEN_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//KHOAN_THU_THANH_VIEN" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+      <xs:unique name="KHOAN_CHI_THANH_VIEN_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//KHOAN_CHI_THANH_VIEN" />
+        <xs:field xpath="@ID" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <GIOI_TINH ID="1" Ten="Nam" Ma_so="NAM" />
+  <GIOI_TINH ID="2" Ten="Nữ" Ma_so="NU" />
+  <GIOI_TINH ID="3" Ten="Khác" Ma_so="KHAC" />
+  <GIA_DINH ID="1" Ten="Gia đình Hai Lúa" Dien_thoai="028-98111211" Dia_chi="11133 Trần hưng Đạo Q.1 TP HCM " />
+  <THANH_VIEN ID="1" Ho_ten="Nguyễn thị bé Lớn" Ngay_sinh="1966-12-04T00:00:00+07:00" ID_GIOI_TINH="2" ID_GIA_DINH="1" />
+  <THANH_VIEN ID="2" Ho_ten="Lê văn bé Nhỏ" Ngay_sinh="1964-07-04T00:00:00+07:00" ID_GIOI_TINH="1" ID_GIA_DINH="1" />
+  <THANH_VIEN ID="3" Ho_ten="Lê thị bé Xíu" Ngay_sinh="1986-09-14T00:00:00+07:00" ID_GIOI_TINH="2" ID_GIA_DINH="1" />
+  <THANH_VIEN ID="4" Ho_ten="Lê văn bé Bé" Ngay_sinh="1976-01-24T00:00:00+07:00" ID_GIOI_TINH="1" ID_GIA_DINH="1" />
+  
+  <KHOAN_THU_GIA_DINH ID="51" Ngay="2016-11-24T00:00:00+07:00" So_tien="3000000" ID_GIA_DINH="1" />
+  <KHOAN_THU_GIA_DINH ID="52" Ngay="2016-11-24T00:00:00+07:00" So_tien="3000000" ID_GIA_DINH="1" />
+
+  <KHOAN_CHI_GIA_DINH ID="1" Ngay="2014-12-09T00:00:00+07:00" So_tien="300000" ID_GIA_DINH="1" />
+  <KHOAN_CHI_GIA_DINH ID="2" Ngay="2014-12-09T00:00:00+07:00" So_tien="500000" ID_GIA_DINH="1" />  
+  
+  <KHOAN_THU_THANH_VIEN ID="1" Ngay="2014-12-04T00:00:00+07:00" So_tien="5000000" ID_THANH_VIEN="1" />
+  <KHOAN_THU_THANH_VIEN ID="2" Ngay="2014-12-04T00:00:00+07:00" So_tien="3000000" ID_THANH_VIEN="2" />
+  
+  <KHOAN_CHI_THANH_VIEN ID="1" Ngay="2014-12-08T00:00:00+07:00" So_tien="200000" ID_THANH_VIEN="1" />
+  <KHOAN_CHI_THANH_VIEN ID="2" Ngay="2014-12-08T00:00:00+07:00" So_tien="100000" ID_THANH_VIEN="2" />  
+
+</CNXML_SV_QLGD_2_Cach_2>
