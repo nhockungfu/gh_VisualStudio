@@ -1,0 +1,6 @@
+D:\Code\GitHub\gh_VisualStudio\QLCT_GIA_DINH\QLCT_GIA_DINH\bin\Debug\QLCT_GIA_DINH.exe.config
+D:\Code\GitHub\gh_VisualStudio\QLCT_GIA_DINH\QLCT_GIA_DINH\obj\Debug\QLCT_GIA_DINH.exe
+D:\Code\GitHub\gh_VisualStudio\QLCT_GIA_DINH\QLCT_GIA_DINH\obj\Debug\QLCT_GIA_DINH.pdb
+D:\Code\GitHub\gh_VisualStudio\QLCT_GIA_DINH\He_Desktop\bin\Debug\QLCT_GIA_DINH.exe.config
+D:\Code\GitHub\gh_VisualStudio\QLCT_GIA_DINH\He_Desktop\obj\Debug\QLCT_GIA_DINH.exe
+D:\Code\GitHub\gh_VisualStudio\QLCT_GIA_DINH\He_Desktop\obj\Debug\QLCT_GIA_DINH.pdb
